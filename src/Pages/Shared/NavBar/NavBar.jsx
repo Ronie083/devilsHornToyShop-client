@@ -1,8 +1,9 @@
-
+import { Link } from "react-router-dom";
+import logo from "../../../assets/logo.png"
 
 const NavBar = () => {
     return (
-        <div className="container mx-auto navbar bg-base-100">
+        <div className="container mx-auto navbar bg-base-100 h-24">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost btn-circle">
@@ -16,15 +17,17 @@ const NavBar = () => {
                 </div>
             </div>
             <div className="navbar-center">
-                <img src="../../../assets/logo (2).png" alt="" />
-                <a className="btn btn-ghost font-bold upper-case text-xl"><span className="text-red-600">Devils</span> Horn</a>
+                <Link to="/" className="btn btn-ghost font-bold upper-case text-xl">
+                    <img className="h-24 " src={logo} alt="" />
+                    <span className="text-red-600">Devils</span> Horn</Link>
             </div>
             <div className="navbar-end">
                 <div className="dropdown dropdown-end">
-                    <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                        <div className="w-10 rounded-full">
+                    <label tabIndex={0} className="btn btn-ghost avatar">
+                        Log-In
+                        {/* <div className="w-10 rounded-full">
                             <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                        </div>
+                        </div> */}
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         <li>
