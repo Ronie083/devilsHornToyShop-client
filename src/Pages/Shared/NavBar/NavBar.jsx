@@ -3,7 +3,7 @@ import logo from "../../../assets/logo.png"
 
 const NavBar = () => {
     return (
-        <div className="container mx-auto navbar bg-base-100 h-24">
+        <div className="container mx-auto navbar bg-base-100 h-20">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost btn-circle">
@@ -17,9 +17,9 @@ const NavBar = () => {
                 </div>
             </div>
             <div className="navbar-center">
-                <Link to="/" className="btn btn-ghost font-bold upper-case text-xl">
+                <Link to="/" className="flex items-center font-bold text-2xl">
                     <img className="h-24 " src={logo} alt="" />
-                    <span className="text-red-600">Devils</span> Horn</Link>
+                    <span className="text-red-600">DEVILS</span> HORN</Link>
             </div>
             <div className="navbar-end">
                 <div className="dropdown dropdown-end">
