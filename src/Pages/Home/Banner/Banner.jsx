@@ -3,7 +3,7 @@
 const Banner = () => {
     return (
         <div>
-            <div className="mx-auto max-w-5xl rounded-lg carousel w-full m-10">
+            <div className="mx-auto max-w-5xl rounded-lg carousel w-full m-10 shadow-2xl">
                 <div id="slide1" className="carousel-item relative w-full">
                     <img src="https://images.unsplash.com/photo-1565991336106-8bf0a1261870?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1091&q=80" className="w-full" />
                     <div className="absolute flex justify-between items-center transform -translate-y-1/2 left-5 right-5 top-1/2">
