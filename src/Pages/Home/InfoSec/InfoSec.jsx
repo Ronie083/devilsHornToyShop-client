@@ -2,7 +2,7 @@
 
 const InfoSec = () => {
     return (
-        <div className="container mx-auto bg-gray-100 stats stats-vertical md:stats-horizontal shadow">
+        <div className="container mx-auto m-10 bg-gray-100 stats stats-vertical md:stats-horizontal shadow-2xl">
 
             <div className="stat">
                 <div className="stat-figure text-secondary">

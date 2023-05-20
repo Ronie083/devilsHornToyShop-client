@@ -11,10 +11,10 @@ const Gallery = () => {
                     <li className="step step-secondary">Choose Product</li>
                     <li className="step step-secondary">Purchase</li>
                     <li className="step step-secondary">Receive Product</li>
-                    <li className="step step-primary">Register get discount and other facilities</li>
+                    <li className="step step-primary">Register to get discount and other facilities</li>
                 </ul>
                 <div className="card-actions">
-                    <button className="btn btn-accent">Let&apos;s Start</button>
+                    <button className="btn btn-error">Let&apos;s Start</button>
                 </div>
             </div>
         </div>
