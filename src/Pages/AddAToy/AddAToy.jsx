@@ -1,6 +1,9 @@
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const AddAToy = () => {
 
@@ -42,7 +45,7 @@ const AddAToy = () => {
         .then(data => {
             console.log(data);
             if(data.insertedId){
-                alert('Your toy added to collection')
+                toast('Your toy added to collection')
             }
         })
     }
@@ -115,6 +118,7 @@ const AddAToy = () => {
 
                             <div className="form-control m-6">
                                 <input className="btn btn-primary" type="submit" value="Add The toy" />
+                                <ToastContainer></ToastContainer>
                             </div>
                         </div>
                     </form>
