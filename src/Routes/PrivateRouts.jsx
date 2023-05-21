@@ -1,14 +1,18 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
-import { Navigate } from 'react-router-dom';
+import { Navigate, useLocation } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
-const PrivateRouts = ({children}) => {
-    const {user} = useContext(AuthContext);
+const PrivateRoutes = ({ children }) => {
+  const { user } = useContext(AuthContext);
+  const location = useLocation();
 
-    if(user?.email){
-        return children
-    }
-    return <Navigate to='/login' replace></Navigate>;
+  if (user) {
+    return children;
+  } else {
+    toast.error('Please login to access this page.');
+    return <Navigate to="/login" state={{ from: location }} replace />;
+  }
 };
 
-export default PrivateRouts;
+export default PrivateRoutes;
