@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const CatTab = ({ category }) => {
 
@@ -15,20 +16,22 @@ const CatTab = ({ category }) => {
                         <div className="card-body">
                             <h2 className="card-title">
                                 {toy.name}
-                                <div className="badge badge-secondary">{toy.rating}</div>
+                                <div className="badge badge-secondary p-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-star-fill mr-2" viewBox="0 0 16 16"> <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" /> </svg>
+                                    {toy.rating}</div>
                             </h2>
                             <p>{toy.description}</p>
                             <div className="card-actions">
-                                <div className="badge badge-outline">Price: {toy.price} </div>
+                                <div className="badge badge-outline p-4">Price: {toy.price}$ </div>
                             </div>
                             <div className="card-actions justify-end">
-                                <button className="btn btn-outline btn-error">View Details</button>
+                                <Link to={`/viewdetails/${toy.toy_id}`} htmlFor="my-modal-3" className="btn btn-error">View Details</Link>
                             </div>
                         </div>
                     </div>
                 )
             }
-        </div>
+        </div >
     );
 };
 
