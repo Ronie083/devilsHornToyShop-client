@@ -49,7 +49,7 @@ const NavBar = () => {
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         {user?.email ? (
                             <>
-                                <li><Link className="text-sm" to="">My Toys</Link></li>
+                                <li><Link className="text-sm" to="mytoy">My Toys</Link></li>
                                 <li><Link className="text-sm" to="addtoy">Add a Toy</Link></li>
                                 <li><Link className="text-sm" to="alltoys">All Toys</Link></li>
                                 <li><button onClick={handleLogOut} className="text-sm">LogOut</button></li>
