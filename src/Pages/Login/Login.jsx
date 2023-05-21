@@ -7,6 +7,7 @@ const Login = () => {
 
     const { logIn } = useContext(AuthContext);
 
+
     const handleLogin = event => {
         event.preventDefault();
         const form = event.target;
@@ -19,6 +20,8 @@ const Login = () => {
             console.log(user);
         })
         .catch(error => console.log(error));
+
+        form.reset();
     }
 
     return (

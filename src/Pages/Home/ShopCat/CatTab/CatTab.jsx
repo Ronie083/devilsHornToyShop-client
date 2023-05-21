@@ -1,10 +1,16 @@
 import PropTypes from 'prop-types';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../../provider/AuthProvider';
 
 const CatTab = ({ category }) => {
 
     const { toys } = category;
 
+    const {user} = useContext(AuthContext);
+    console.log(user)
+    
+    
 
     return (
         <div className='md:flex justify-between'>

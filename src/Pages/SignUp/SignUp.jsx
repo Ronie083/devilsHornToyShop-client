@@ -7,6 +7,7 @@ const SignUp = () => {
 
     const {createUser} = useContext(AuthContext);
 
+
     const handleSignUp = event =>{
         event.preventDefault();
         const form = event.target;
@@ -21,6 +22,7 @@ const SignUp = () => {
                 console.log(user)
             })
             .catch(error => console.log(error))
+            form.reset();
     }
 
     return (

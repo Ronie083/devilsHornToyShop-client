@@ -1,7 +1,19 @@
 import { Link } from "react-router-dom";
 import logo from "../../../assets/logo.png"
+import { useContext } from "react";
+import { AuthContext } from "../../../provider/AuthProvider";
 
 const NavBar = () => {
+
+    const { user, logOut } = useContext(AuthContext);
+    console.log(user)
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => console.log(error))
+    }
+
     return (
         <div className="container mx-auto navbar bg-base-100 h-20">
             <div className="navbar-start">
@@ -11,7 +23,6 @@ const NavBar = () => {
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         <li><Link to="/">Homepage</Link></li>
-                        <li><a>All Toys</a></li>
                         <li><Link to="/blogs">Blogs</Link></li>
                     </ul>
                 </div>
@@ -24,15 +35,28 @@ const NavBar = () => {
             <div className="navbar-end">
                 <div className="dropdown dropdown-end">
                     <label tabIndex={0} className="btn btn-ghost avatar">
-                        Log-In
-                        {/* <div className="w-10 rounded-full">
-                            <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                        </div> */}
+                        {user?.email ? (
+                            <div className="flex items-center">
+                                <div className="w-10 rounded-full mr-3">
+                                    <img src={user.photoURL} alt="User Avatar" />
+                                </div>
+                                <span className="hover:text-gray-800">{user.displayName}</span>
+                            </div>
+                        ) : (
+                            "Log-In"
+                        )}
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                        <Link to="">My Toys</Link>
-                        <Link to="addtoy">Add a Toy</Link>
-                        <Link to="login">Logout</Link>
+                        {user?.email ? (
+                            <>
+                                <li><Link className="text-sm" to="">My Toys</Link></li>
+                                <li><Link className="text-sm" to="addtoy">Add a Toy</Link></li>
+                                <li><Link className="text-sm" to="alltoys">All Toys</Link></li>
+                                <li><button onClick={handleLogOut} className="text-sm">LogOut</button></li>
+                            </>
+                        ) : (
+                            <li><Link className="text-sm" to="login">LogIn</Link></li>
+                        )}
                     </ul>
                 </div>
             </div>
