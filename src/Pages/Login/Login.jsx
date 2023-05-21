@@ -4,6 +4,7 @@ import { AuthContext } from "../../provider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
+
 const Login = () => {
 
     const { logIn } = useContext(AuthContext);
@@ -14,17 +15,17 @@ const Login = () => {
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log( email, password);
+        console.log(email, password);
         logIn(email, password)
-        .then(result => {
-            const user = result.user;
-            console.log(user);
-            toast('Log In successfully');
-        })
-        .catch(error => {
-            console.log(error)
-            toast('Log In Failed');
-        });
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                toast('Log In successfully');
+            })
+            .catch(error => {
+                console.log(error)
+                toast('Log In Failed');
+            });
 
         form.reset();
     }

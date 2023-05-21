@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../../provider/AuthProvider';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const CatTab = ({ category }) => {
 
@@ -9,11 +11,15 @@ const CatTab = ({ category }) => {
 
     const {user} = useContext(AuthContext);
     console.log(user)
+
+    useEffect(() =>{
+        Aos.init({duration: 2000});
+    }, [])
     
     
 
     return (
-        <div className='md:flex justify-between'>
+        <div className='md:flex justify-between' data-aos = "fade-right">
             {
                 toys.map(toy =>
                     <div key={toy.toy_id} className="card text-left w-96 bg-base-100 shadow-2xl my-10">

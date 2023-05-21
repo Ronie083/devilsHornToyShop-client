@@ -9,9 +9,10 @@ const MyToys = () => {
     const [toysAdded, setToysAdded] = useState([]);
 
     console.log(toysAdded);
+    const url = `http://localhost:5000/addedtoy?sellerEmail=${sellerEmails}`;
 
     useEffect(() => {
-        const url = `http://localhost:5000/addedtoy?sellerEmail=${sellerEmails}`;
+        
 
         fetch(url)
             .then((response) => response.json())
@@ -19,7 +20,11 @@ const MyToys = () => {
                 console.log(data);
                 setToysAdded(data);
             });
-    }, []);
+    }, [url]);
+
+    const handleEditInfo = id =>{
+
+    }
 
     const handleDelete = (id) => {
         toast.promise(
@@ -79,7 +84,7 @@ const MyToys = () => {
                             <tr key={toyAdded._id}>
                                 <th>
                                     <label>
-                                        <button className="btn btn-ghost btn-xs">Edit</button>
+                                        <button onClick={() => handleEditInfo(toyAdded._id)} className="btn btn-ghost btn-xs">Edit</button>
                                     </label>
                                 </th>
                                 <td>
