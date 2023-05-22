@@ -10,6 +10,7 @@ import MyToys from "../Pages/MyToys/MyToys";
 import PrivateRouts from "./PrivateRouts";
 import AllToys from "../Pages/AllToys/AllToys";
 import EditInfo from "../Pages/MyToys/EditInfo/EditInfo";
+import Notfound from "../Pages/NotFound/Notfound";
 
 const router = createBrowserRouter([
     {
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
         }
       ]
     },
+    {
+      path: "*",
+      element: <Notfound></Notfound>
+    }
   ]);
 
   export default router
