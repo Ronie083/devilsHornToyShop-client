@@ -27,7 +27,7 @@ const EditInfo = () => {
         }
         console.log(editedInfo);
 
-            fetch(`http://localhost:5000/addedtoy/`, {
+            fetch(`https://devils-horn-toy-server.vercel.app/addedtoy/`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'

@@ -35,7 +35,7 @@ const router = createBrowserRouter([
         {
           path: "/viewdetails/:id",
           element:<PrivateRouts><ViewDetails></ViewDetails></PrivateRouts>,
-          loader: ({params}) => fetch(`http://localhost:5000/alltoys/${params.id}`)
+          loader: ({params}) => fetch(`https://devils-horn-toy-server.vercel.app/alltoys/${params.id}`)
         },
         {
           path:"addtoy",
@@ -44,17 +44,17 @@ const router = createBrowserRouter([
         {
           path: "mytoy",
           element: <PrivateRouts><MyToys></MyToys></PrivateRouts>,
-          loader: () => fetch(`http://localhost:5000/addedtoy`)
+          loader: () => fetch(`https://devils-horn-toy-server.vercel.app/addedtoy`)
         },
         {
           path: "alltoys",
           element: <PrivateRouts><AllToys></AllToys></PrivateRouts>,
-          loader: () => fetch(`http://localhost:5000/addedtoy`)
+          loader: () => fetch(`https://devils-horn-toy-server.vercel.app/addedtoy`)
         },
         {
           path: "editinfo/:id",
           element: <EditInfo></EditInfo>,
-          loader: ({params}) => fetch(`http://localhost:5000/addedtoy/${params.id}`)
+          loader: ({params}) => fetch(`https://devils-horn-toy-server.vercel.app/addedtoy/${params.id}`)
         }
       ]
     },

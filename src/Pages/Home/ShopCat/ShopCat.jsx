@@ -9,7 +9,7 @@ const ShopCat = () => {
     const [categories, setCategories] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/alltoys')
+        fetch('https://devils-horn-toy-server.vercel.app/alltoys')
             .then(res => res.json())
             .then(data => setCategories(data));
     }, [])

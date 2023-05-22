@@ -9,7 +9,7 @@ const MyToys = () => {
     const [toysAdded, setToysAdded] = useState([]);
 
     console.log(toysAdded);
-    const url = `http://localhost:5000/addedtoy?sellerEmail=${sellerEmails}`;
+    const url = `https://devils-horn-toy-server.vercel.app/addedtoy?sellerEmail=${sellerEmails}`;
 
     useEffect(() => {
         
@@ -40,7 +40,7 @@ const MyToys = () => {
             }
         )
             .then(() => {
-                fetch(`http://localhost:5000/addedtoy/${id}`, {
+                fetch(`https://devils-horn-toy-server.vercel.app/addedtoy/${id}`, {
                     method: "DELETE",
                 })
                     .then((res) => res.json())

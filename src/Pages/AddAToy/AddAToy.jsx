@@ -34,7 +34,7 @@ const AddAToy = () => {
         }
         console.log(addedToy);
 
-        fetch('http://localhost:5000/addedtoy', {
+        fetch('https://devils-horn-toy-server.vercel.app/addedtoy', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
