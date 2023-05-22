@@ -37,7 +37,7 @@ const CatTab = ({ category }) => {
                                 <div className="badge badge-outline p-4">Price: {toy.price}$ </div>
                             </div>
                             <div className="card-actions justify-end">
-                                <Link to={`/viewdetails/${toy.toy_id}`} htmlFor="my-modal-3" className="btn btn-error">View Details</Link>
+                                <Link to={`/viewdetails/${toy.toy_id}`} className="btn btn-error">View Details</Link>
                             </div>
                         </div>
                     </div>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -22,9 +22,6 @@ const MyToys = () => {
             });
     }, [url]);
 
-    const handleEditInfo = id =>{
-
-    }
 
     const handleDelete = (id) => {
         toast.promise(
@@ -84,7 +81,7 @@ const MyToys = () => {
                             <tr key={toyAdded._id}>
                                 <th>
                                     <label>
-                                        <button onClick={() => handleEditInfo(toyAdded._id)} className="btn btn-ghost btn-xs">Edit</button>
+                                        <Link to={`/editinfo/${toyAdded._id}`} className="btn btn-ghost btn-xs">Edit</Link>
                                     </label>
                                 </th>
                                 <td>
