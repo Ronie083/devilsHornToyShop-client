@@ -8,7 +8,11 @@ const EditInfo = () => {
     const toyInfo = useLoaderData();
     console.log(toyInfo);
 
-    const handleEditedInfo = event => {
+    
+    const toyIn =  toyInfo.map(toy => toy._id)
+    
+
+    const handleEditedInfo = (event) => {
         event.preventDefault();
         const form = event.target;
         const name = form.name.value;
@@ -27,18 +31,19 @@ const EditInfo = () => {
         }
         console.log(editedInfo);
 
-            fetch(`https://devils-horn-toy-server.vercel.app/addedtoy/`, {
+        const id = toyIn[0];
+            fetch(`https://devils-horn-toy-server.vercel.app/addedtoy/${id}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'
                 },
-                body: JSON.stringify()
+                body: JSON.stringify(editedInfo)
             })
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);
                     if (data.insertedId) {
-                        toast('Your toy added to collection')
+                        toast('Your toy info updated')
                     }
                 })
 
@@ -96,7 +101,7 @@ const EditInfo = () => {
                         </div>
 
                         <div className="form-control m-6">
-                            <input className="btn btn-primary" type="submit" value="Add The toy" />
+                            <input className="btn btn-primary" type="submit" value="Update Info" />
                             <ToastContainer></ToastContainer>
                         </div>
                     </div>

@@ -12,7 +12,7 @@ const MyToys = () => {
     const url = `https://devils-horn-toy-server.vercel.app/addedtoy?sellerEmail=${sellerEmails}`;
 
     useEffect(() => {
-        
+
 
         fetch(url)
             .then((response) => response.json())
