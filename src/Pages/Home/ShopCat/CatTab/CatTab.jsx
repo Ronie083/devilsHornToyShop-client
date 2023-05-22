@@ -1,17 +1,12 @@
 import PropTypes from 'prop-types';
-import { useContext, useEffect } from 'react';
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { AuthContext } from '../../../../provider/AuthProvider';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
 const CatTab = ({ category }) => {
 
     const { toys } = category;
-
-    const {user} = useContext(AuthContext);
-    console.log(user)
-
     useEffect(() =>{
         Aos.init({duration: 2000});
     }, [])
