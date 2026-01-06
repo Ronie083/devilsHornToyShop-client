@@ -1,28 +1,71 @@
 # Devils Horn Toy Marketplace
-Toy Marketplace is a full-stack web application focused on a specific toy category, Action Figure Toys. It provides a platform for users to buy and sell action figure toys from various brands such as Marvel, DC, and Anime.
 
-## Features
-- User-friendly interface with a visually appealing design.
-- Authentication system with login and registration pages.
-- Home page featuring a banner section, gallery section, and a tab system for browsing toys by category.
-- Blogs page with informative articles on access tokens, refresh tokens, SQL vs NoSQL databases, Express.js, Nest.js, and MongoDB Aggregate.
-- All Toys page displaying all toys added by users in a tabular form, with a search functionality.
-- View Details page for each toy, showing detailed information about the toy, including picture, seller details, price, rating, and description.
-- Add A Toy page allowing users to add new toys for sale, including image, name, seller information, sub-category, price, rating, quantity, and description.
-- My Toys page accessible only to logged-in users, displaying the toys they have added, with options to update and delete each toy.
-- Responsive design for both mobile and desktop devices.
-- 404 page with an interesting image or GIF and a "Back to Home" button.
+Devils Horn Toy Marketplace is a **full-stack MERN web application** focused on **Action Figure Toys**.  
+It allows users to **buy, sell, manage, and explore** toys from brands such as **Marvel, DC, and Anime**.
 
-## Technologies Used
-- React.js for the frontend development.
-- React Router for handling routing and navigation.
-- Firebase for authentication and storing user data.
-- MongoDB for storing and retrieving toy data.
-- Express.js as the backend framework.
-- Node.js as the runtime environment.
-- HTML, CSS, and JavaScript for the frontend UI/UX design.
-- AOS (Animate On Scroll) package for adding animation effects on the home page.
+## 🚀 Project Overview
+This project demonstrates:
+- Secure user authentication
+- Full CRUD operations
+- Category-based product browsing
+- Protected routes and user-specific data handling
+- Clean, responsive frontend architecture
 
-## Website Link
+## ⚠️ Live Demo Notice
+The live deployment showcases the [here](https://devils-horn.firebaseapp.com/).
 
-The live website can be accessed [here](https://devils-horn.firebaseapp.com/).
+Due to server hosting limitations, **backend services (authentication & database operations) may be inactive** in the live version.  
+👉 **Full frontend–backend integration logic can be reviewed in the source code.**
+
+## ✨ Key Features
+- Modern and responsive UI for mobile & desktop
+- Firebase authentication (login & registration)
+- Home page with:
+  - Banner section
+  - Gallery
+  - Category-based tab system
+- All Toys page:
+  - Tabular display of user-added toys
+  - Search functionality
+- Toy Details page:
+  - Image, seller info, price, rating, and description
+- Add A Toy:
+  - Create listings with full product metadata
+- My Toys (protected route):
+  - View, update, and delete user-specific items
+- Blog section covering:
+  - Access vs Refresh Tokens
+  - SQL vs NoSQL
+  - Express.js, Nest.js
+  - MongoDB Aggregation
+- Custom 404 page
+
+## 🛠️ Technologies Used
+**Frontend**
+- React.js
+- React Router
+- HTML, CSS, JavaScript
+- AOS (Animate On Scroll)
+
+**Backend**
+- Node.js
+- Express.js
+- MongoDB
+
+**Authentication**
+- Firebase
+
+## 📁 Architecture Highlights
+- RESTful API design
+- Environment-based configuration
+- Axios/fetch for API communication
+- Protected routes using authentication guards
+- Modular component structure
+
+## 📌 Use Case
+This project is suitable as a **junior-level full-stack or frontend showcase**, emphasizing:
+- Real-world CRUD logic
+- Auth-based UI behavior
+- Clean UI/UX design
+
+
